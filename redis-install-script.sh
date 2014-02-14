@@ -15,7 +15,7 @@ sudo yum -y update
 sudo ln -sf /usr/share/zoneinfo/America/Indianapolis /etc/localtime
 sudo yum -y install gcc gcc-c++ make 
 echo "*****************************************"
-echo " 2. Download, Untar and Make Redis 2.6"
+echo " 2. Download, Untar and Make Redis 2.8.4"
 echo "*****************************************"
 wget -q http://download.redis.io/releases/redis-2.8.4.tar.gz
 tar xzf redis-2.8.4.tar.gz
