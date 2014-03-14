@@ -39,7 +39,8 @@ echo " 3: ... dir /var/lib/redis"
 echo " 4: ... loglevel notice"
 echo " 5: ... logfile /var/log/redis.log"
 echo "*****************************************"
-sudo sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
+sudo mkdir /var/log/redis
+sudo sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile \"\"$/logfile \/var\/log\/redis\/redis.log/" redis.conf > /etc/redis/redis.conf
 echo "*****************************************"
 echo " 5. Download init Script"
 echo "*****************************************"
